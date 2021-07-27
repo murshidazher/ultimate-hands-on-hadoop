@@ -60,7 +60,7 @@ DUMP fiveStarsWithData;
 
 # (12,4.385767790262173, 12, Usual Suspects, The (1995), 8083358400)
 
-ORDER BY
+ORDER BY - We use :: to access a specific column from a specific table
 oldestFiveStarMovies = ORDER fiveStarsWithData BY nameLookup::releaseTime;
 DUMP oldestFiveStarMovies;
 
