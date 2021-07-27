@@ -8,7 +8,7 @@
 - `CUBE` - takes more than 2 tables and calculates the cartesian product.
 - `RANK` - is just like `ORDER` but assigns an additional column with the rank index.
 
-<img src="./docs/01.png">
+![Commands in Pig](./docs/01.png)
 
 ## Diagnostics
 
