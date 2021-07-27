@@ -1,6 +1,7 @@
 # Pig
 
 > For more information look into the book [Programming Pig: Dataflow Scripting with Hadoop](https://www.amazon.com/Programming-Pig-Dataflow-Scripting-Hadoop/dp/1491937092/ref=pd_sbs_1/132-8475213-1692361?pd_rd_w=5Cake&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=G34CHAB3ZVSRMKD1FPJ7&pd_rd_r=7aafbcc0-3d3c-4054-a0af-4e7384aeebce&pd_rd_wg=xKKVp&pd_rd_i=1491937092&psc=1)
+
 ## Commands in Pig
 
 - `CROSS` - takes two tables and calculates the cartesian product.
