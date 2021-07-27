@@ -10,6 +10,7 @@
 
 - [ultimate-hands-on-hadoop](#ultimate-hands-on-hadoop)
   - [Table of Contents](#table-of-contents)
+  - [Quick Navigation by Technology](#quick-navigation-by-technology)
   - [Tech Stack](#tech-stack)
     - [Core](#core)
     - [Querying](#querying)
@@ -19,6 +20,13 @@
     - [Notebooks and Visualization](#notebooks-and-visualization)
     - [Other](#other)
   - [License](#license)
+
+## Quick Navigation by Technology
+
+- [Hive and ml-100k](./section-01)
+- [MR using Python](./section-02)
+- [PigLatin and Pig](./section-03)
+- [Spark](./section-04)
 
 ## Tech Stack
 
