@@ -16,8 +16,8 @@ def parseInput(line):
 
 if __name__ == "__main__":
 	# The main script - create our SparkContext
-    conf = SparkConf().setAppName("FilteredWorstMovies")
-    sc = SparkContext(conf = conf)
+  conf = SparkConf().setAppName("FilteredWorstMovies")
+  sc = SparkContext(conf = conf)
 
 	# Load up our movie ID -> name dictionary
 	movieNames = loadMovieNames()
@@ -46,4 +46,3 @@ if __name__ == "__main__":
 	# Print them out:
 	for result in results:
 		print(movieNames[result[0]], result[1])
-
