@@ -2,6 +2,7 @@ ratings = LOAD '/user/maria_dev/ml-100k/u.data' AS (userID:int, movieID:int, rat
 
 metadata = LOAD '/user/maria_dev/ml-100k/u.item' USING PigStorage('|') AS (movieID:int, movieTitle:chararray, releaseDate:chararray, videoRelease:chararray, imdbLink:chararray);
 
+-- Create relation from another table using FOREACH/GENERATE
 nameLookup = FOREACH metadata GENERATE movieID, movieTitle;
 
 ratingsByMovie = GROUP ratings By movieID;
