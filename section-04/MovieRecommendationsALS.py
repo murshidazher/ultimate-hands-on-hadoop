@@ -32,6 +32,7 @@ if __name__ == "__main__":
     ratingsRDD = lines.map(parseInput)
 
     # Convert to a DataFrame and cache it
+    # since we're calling that dataframe more than once we can cache it so it doesnt recreate it more than once
     ratings = spark.createDataFrame(ratingsRDD).cache()
 
     # Create an ALS collaborative filtering model from the complete data set
@@ -51,6 +52,7 @@ if __name__ == "__main__":
     popularMovies = ratingCounts.select("movieID").withColumn('userID', lit(0))
 
     # Run our model on that list of popular movies for user ID 0
+    # predict the ratings
     recommendations = model.transform(popularMovies)
 
     # Get the top 20 movies with the highest predicted rating for this user
