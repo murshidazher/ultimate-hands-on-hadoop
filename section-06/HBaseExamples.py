@@ -11,9 +11,9 @@ if (ratings.exists()):
 ratings.create('rating')
 
 print("Parsing the ml-100k ratings data...\n")
-ratingFile = open("C:/Users/User/Desktop/Alvin Programming Files/DataScience Courses/The Ultimate Hadoop/Git Files/Section1/ml-100k/u.data", "r")
+ratingFile = open("section-01/ml-100k/u.data", "r")
 
-batch = ratings.batch()
+batch = ratings.batch() # create a batch object for multiple inserts all at once
 
 for line in ratingFile:
     (userID, movieID, rating, timestamp) = line.split()

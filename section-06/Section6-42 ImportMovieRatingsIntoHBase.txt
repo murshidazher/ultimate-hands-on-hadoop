@@ -2,7 +2,7 @@
 # Then show we can quickly query it for individual users
 # Good example of sparse data
 
-For e.g 
+For e.g
 This particular UserID
 Column family: rating
 Rating: 50 (movieID)
@@ -21,7 +21,7 @@ Value: 5
 # So you will need some sort of Python environment to do it
 
 # Firstly, you need to get HBase running
-# Set up the HBase REST port forwarding in VirtualBox 
+# Set up the HBase REST port forwarding in VirtualBox
 
 # Go to Hortonworks settings, Network, Port Forwarding Rules
 # Press the + button
@@ -41,6 +41,7 @@ password: password
 su root
 
 # To activate your port 8000 on HBase REST on maria_dev PUTTY
+# this starts the rest server
 /usr/hdp/current/hbase-master/bin/hbase-daemon.sh start rest -p 8000 --infoport 8001
 
 # Now port 8000 is activated for HBase REST
