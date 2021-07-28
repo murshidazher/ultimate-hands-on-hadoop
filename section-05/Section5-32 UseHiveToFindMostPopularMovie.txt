@@ -1,0 +1,56 @@
+# Sign into Ambari using user Maria_dev and password: Maria_dev
+
+# Go to view icon and select Hive View
+
+# Drop the table Ratings if it exist from before
+DROP TABLE ratings;
+
+# Go and press Upload Table for u.data
+
+# Set up the configuration for Field Delimiter to TAB Delimiter 9
+
+# Upload u.data from your local drive
+
+# Call the table name ratings
+
+# Name the following columns as
+column1: user_id
+column2: movie_id
+column3: rating
+column4: epoch_seconds
+
+# Go and import the table
+
+# Set up the configuration for Field Delimiter to TAB Delimiter 124 pipe character to upload u.item
+
+# Upload u.item from your local drive
+
+# Call the table names
+
+# Name the following columns as
+column1: movieID
+column2: title
+
+# Go to query the database in Hive
+CREATE VIEW TopMovieIDs AS
+SELECT movieID, count(movieID) as ratingCount
+FROM ratings
+GROUP BY movieID
+ORDER BY ratingCount DESC;
+
+SELECT n.title, ratingCount
+FROM topMovieIDs t JOIN names n ON t.movieID = n.movieID;
+
+# Hit Execute and you can see the movieName and Rating Count
+
+# Use this script if the view already exists in the script otherwise it will throw an error
+CREATE VIEW IF NOT EXISTS
+
+# To drop the view topmovieids
+DROP VIEW topmovieids;
+
+
+
+
+
+
