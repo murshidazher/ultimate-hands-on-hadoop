@@ -62,5 +62,6 @@ sqoop export --connect jdbc:mysql://localhost/movielens -m 1 --driver com.mysql.
 
 # Export data from Hive to MySQL by Specifying the Folder
 # export dir will take the table schema from it.
+# Note: we need to create that table beforehand in mysql before exporting
 sqoop export --connect jdbc:mysql://localhost/movielens -m 1 --driver com.mysql.jdbc.Driver --table exported_movies --export-dir /apps/hive/warehouse/movies --input-fields-terminated-by '/0001'
 ```
