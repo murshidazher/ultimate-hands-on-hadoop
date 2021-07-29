@@ -39,7 +39,7 @@
 
 `MRv1` mapreduce legacy architecture vs new architecture with `YARN`
 
-The pink color are part of hadoop itself but everything else is sort of addon projects that have come out over time that integrate hadoop to solve some specific problems. Sitting on top of hdfs is YARN (yet another resource negotiator) - data processing comes in this place. Its what decides what gets run tasks when and what nodes are available for the work it is like a heartbeat to see which nodes are available and not. MapReduce allows you do parallel computing and process the data in parallel across the cluster. Originally, Yarn and mapreduce were the same but later split on so that other application can be built on top of YARN.
+Sitting on top of hdfs is `YARN` (yet another resource negotiator) - data processing comes in this place. Its what decides what gets run tasks when and what nodes are available for the work it is like a heartbeat to see which nodes are available and not. MapReduce allows you do parallel computing and process the data in parallel across the cluster. Originally, Yarn and mapreduce were the same but later split on so that other application can be built on top of YARN.
 
 Sitting on top of  `MapReduce` is `pig`, if we dont want to write java or python map reduce code, we can use SQL style scripting language which is PIG. We can chain together queries and get the processing.Hive sits on top of mapreduce too and it solves the same problem as PIG its really more directly works like a SQL database. It makes all the files that is sitting on the file system like a SQL database. So we can make SQL queries on it.  But underneath its not really a SQL database.
 
