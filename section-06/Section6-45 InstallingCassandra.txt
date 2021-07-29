@@ -41,7 +41,7 @@ gpgcheck = 0
 # To ensure the file is correctly saved inside the repository
 cat datastax.repo
 
-# Install the package for Cassandra
+# Install the package for Cassandra - datastaxcassandra v3
 yum install dsc30
 
 # Install the python dependencies for Cassandra
@@ -50,7 +50,7 @@ pip install cqlsh
 # Starts up Cassandra
 service cassandra start
 
-# To start up the cqlsh server
+# To start up the cqlsh server - shell for working with cassandra
 cqlsh
 
 # To allow cqlsh to only use the version 3.4.0

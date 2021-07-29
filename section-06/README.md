@@ -84,6 +84,7 @@ HBase is not always the best choice when your problem shift to another type
 > No single point of failure
 
 - It doesn't have a single point-of-failure since it doesn't have a master node.
+- `keyspace` in cassandra which is like `database`
 - It has the same underneath schema and structure like hbase
 - Cassandra has a query language called `CQL`.
 - CAP Theorem - consistency, availability & partition tolerance. you can only have 2 out of 3.
@@ -98,17 +99,67 @@ HBase is not always the best choice when your problem shift to another type
 
 ### Spark with Cassandra
 
+> The syntax for `CQL` is similar to `SQL`.
+
 - Look into this for cassandra [installation in cluster](./Section6-45%20InstallingCassandra.txt)
 - `DataStax` offers a Spark-Cassandra connector - Allows you to read and write Cassandra tables as DataFrames
 - Is smart about passing queries on those DataFrames down to the appropriate level
-
 - Use cases
-	- Use Spark for analytics on data stored in Cassandra
-	- Use Spark to transform data and store it into Cassandra for transactional use
+  - Use Spark for analytics on data stored in Cassandra
+  - Use Spark to transform data and store it into Cassandra for transactional use
 
 ### Python with Spark + Cassandra
 
 > Look into [CassandraSpark](./CassandraSpark.py)
 
 - We're going to write into a table and query it with Spark
+- We need to always switch version before running cassandra
+
+```sh
+> scl enable python27 bash
+> python -v
+```
+
+Create the table strcuture in cassandra using `cqlsh` and then run the spark script,
+
+```sh
+> export SPARK_MAJOR_VERSION=2
+# this will parse the u.users dataset and inserts to the cassandra table/keyspace created
+> spark-submit --packages datastax:spark-cassandra-connector:2.0.0-M2-s_2.11 CassandraSpark.py # we stepup the env
+```
+
 ## MongoDB
+
+> Document-based data model
+
+- Mongo name comes from the `HuMONGOus` data.
+- MongoDB sits on `CAP` theorem with consistency and partition-tolerance giving out the high availability.
+- Its has a single master node, we can read from any nodes but writes will be disabled until the issue is resolved. So this has `consistency` over `availability`.
+- MongoDB maintains secondary nodes for failovers when master goes down. We cant have even number of servers since we cant get a majority to decide who the master is. We can maintain `arbiter` node in terms of node failure to elect the master node.
+- You can create a schema or not. Schema is not forced and we don't need to have a primary key like in cassandra but if you need to shard then you need to have an indexed field.
+- Since we cant do JOINS we need to make sure our data are denormalized as possible.
+- For our big dataset we need to setup something called `sharding`, where a specific set of data is handled by specific nodes.
+- The routing will happen through `mongos`, it will talk to a collection of `configuration servers` and it will get the parition information and then choose which replica set to talk to get the data.
+- `mongos` runs a balancer in the background which will rebalance the sharded boundries.
+- If you're sharding it is recommended to choose a index field which has a high cardinality with few duplicates.
+- `GridFS` is something similar to HDFS, where it will chunk the large files into smaller files and store.
+- We can also run aggregation job with `MapReduce`.
+- When we need to connect Spark with MongoDB and then run a MapReduce job, it will push down to MapReduce itself since its more efficient to use the mongodb built in MapReduce. So it doesnt really need to be in Hadoop.
+
+![sharding mongodb](./docs/06.png)
+
+## Sharding QUIRKS
+
+- But the autobalancing can sometimes fail, in particular if your config server are down. This is called a `Split storms`, mongos processes restarted too often.
+
+### Python with Spark + MongoDB
+
+> Look into [MongoSpark](./MongoSpark.py)
+
+- Read the installation [instruction](./Section6-48%20InstallMongoDBAndIntegrateSparkWithMongoDB.txt)
+
+```sh
+> export SPARK_MAJOR_VERSION=2
+> spark-submit --version
+> spark-submit --packages org.mongodb.spark:mongo-spark-connector_2.11:2.2.0 MongoSpark.py
+```
