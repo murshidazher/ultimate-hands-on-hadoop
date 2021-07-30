@@ -2,7 +2,7 @@
 # su root to go to super user
 su root
 
-# Ensure that you are in your home directory
+# Ensure that you are in your home directory /home/maria_dev
 pwd
 
 # Download presto server onto your directory

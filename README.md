@@ -33,8 +33,9 @@
 - [Spark](./section-04)
 - [Hive](./section-05)
 - [HBase, MongoDB & Cassandra](./section-06)
-- [Drill, Hue, Phoenix, Presto](./section-07)
-
+- [Drill, Phoenix, Presto](./section-07)
+- [Yarn, Tez, Mesos, Zookeeper, Oozie, Hue](./section-08)
+  
 ## Notes
 
 `HDFS` → `MapReduce` (distributed prosessing is made possible by mapreduce) → `Pig` →  `Hive`
