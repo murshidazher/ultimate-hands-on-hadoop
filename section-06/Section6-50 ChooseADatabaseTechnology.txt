@@ -2,6 +2,8 @@
 
 # Integration considerations
 
+# Think about the pieces and technologies which needs to talk with each oher
+
 # Moving from relational databases to non relational databases
 
 # Think about scaling requirements
@@ -16,7 +18,7 @@
 
 # Think about the support considerations
 # Most of the nosql databases have no or little security at all
-# Big vs small companies for security for nosql databases or any outsourced solutions 
+# Big vs small companies for security for nosql databases or any outsourced solutions
 # So if you want paid support for security and related concerns, Mongodb is a good option as there are companies out there that offer paid support
 
 # Budget considerations? Probably not.
@@ -24,12 +26,12 @@
 # So think about the cost of these servers, renting amazon servers
 
 # Think about the CAP Considerations
-# C for Consistency, A for Availability and P for Partition-Tolerance 
+# C for Consistency, A for Availability and P for Partition-Tolerance
 # CA -> MySQL
 # CP -> HBase, mongoDB
 # AP -> Cassandra
 # CAP theorem is really not a hard/ distinct rule, for e.g Cassandra can also configure consistency
-# MySQL you can also set up sharding and partition tolerance
+# With MySQL too you can also set up sharding and partition tolerance but its more hassle than a NoSQL
 
 # The last thing is keep it simple (Simplicity)
 

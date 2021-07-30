@@ -32,6 +32,8 @@
 - [PigLatin and Pig](./section-03)
 - [Spark](./section-04)
 - [Hive](./section-05)
+- [HBase, MongoDB & Cassandra](./section-06)
+- [Drill, Hue, Phoenix, Presto](./section-07)
 
 ## Notes
 
@@ -123,7 +125,7 @@ There are several query engines which also sits on top of the hadoop cluster. So
 
 - [x] HBase
 - [x] Cassandra
-- [ ] MongoDB
+- [x] MongoDB
 
 ### Streaming
 

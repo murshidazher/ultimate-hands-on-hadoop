@@ -145,6 +145,7 @@ Create the table strcuture in cassandra using `cqlsh` and then run the spark scr
 - `GridFS` is something similar to HDFS, where it will chunk the large files into smaller files and store.
 - We can also run aggregation job with `MapReduce`.
 - When we need to connect Spark with MongoDB and then run a MapReduce job, it will push down to MapReduce itself since its more efficient to use the mongodb built in MapReduce. So it doesnt really need to be in Hadoop.
+- MongoDB doesnt create `index` by default, so it will do a `full-table scan` if we need to search using `index-scan` we need to setup the index by primary key.
 
 ![sharding mongodb](./docs/06.png)
 
@@ -163,3 +164,5 @@ Create the table strcuture in cassandra using `cqlsh` and then run the spark scr
 > spark-submit --version
 > spark-submit --packages org.mongodb.spark:mongo-spark-connector_2.11:2.2.0 MongoSpark.py
 ```
+
+## Choosing your Database
