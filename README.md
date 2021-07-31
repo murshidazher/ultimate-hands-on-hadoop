@@ -35,6 +35,8 @@
 - [HBase, MongoDB & Cassandra](./section-06)
 - [Drill, Phoenix, Presto](./section-07)
 - [Yarn, Tez, Mesos, Zookeeper, Oozie, Hue](./section-08)
+- [Real time Ingestion - kafka and flume](./section-09)
+- 
   
 ## Notes
 
@@ -105,16 +107,16 @@ There are several query engines which also sits on top of the hadoop cluster. So
 - [x] Pig
 - [x] Spark
 - [x] Hive
-- [ ] Tez
-- [ ] Mesos - Alternative cluster manager for `YARN`
-- [ ] Zookeeper
-- [ ] Oozie
+- [x] Tez
+- [x] Mesos - Alternative cluster manager for `YARN`
+- [x] Zookeeper
+- [x] Oozie
 
 ### Querying
 
-- [ ] Apache Drill
-- [ ] Apache Phoenix
-- [ ] Presto
+- [x] Apache Drill
+- [x] Apache Phoenix
+- [x] Presto
 
 ### Ingestion
 
