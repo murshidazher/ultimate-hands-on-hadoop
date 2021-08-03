@@ -13,9 +13,12 @@
 
 ### Example Kafka
 
-> The implementation details is available [here](./Section9-76PublishingWebLogsWithKafka.txt)
+> The implementation details is available [here](./Section9-76PublishingWebLogsWithKafka.txt). `source` > `connector` > `sink`
 
 - We will write all the logs from different servers and aggregate it to a single file using kafka as new logs comes in under the same topic.
 - This is similar to publishing web logs.
+- The [access_log_small.txt](./access_log_small.txt) file will be the example log files.
 
 ## Flume
+
+- In hadoop world, there is more than one way to solve the same problem.
