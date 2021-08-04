@@ -24,10 +24,18 @@ mkdir spool
 
 bin/flume-ng agent --conf conf --conf-file ~/flumelogs.conf --name a1 -Dflume.root.logger=INFO,console
 
+# create a new terminal session
 # copy the earlier file that we have access_log_small.txt into the folder spool/fred.txt
+
+cp access_log_small.txt spool/fred.txt
+
+# now you will see that flume will consume this data automatically in the other session
 
 # change directory into the spool directory
 
 cd spool
+ls
+
+# fred.txt.COMPLETED
 
 # Go to ambari ui and you can open the logs files inside user/maria_dev/flume/ to see access_log_small.txt information pushed inside

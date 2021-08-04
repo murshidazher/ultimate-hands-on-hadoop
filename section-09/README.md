@@ -1,4 +1,4 @@
-# Real-time Streaming
+# Real-time Data Stream
 
 - Sometimes you might need to process data as the data is coming in and not sitting there in the cluster.
 
@@ -22,3 +22,20 @@
 ## Flume
 
 - In hadoop world, there is more than one way to solve the same problem.
+- Flume was originally made to get data into the Hadoop into the ecosystem unlike kafka which is more general purpose.
+- One of the most popular usecase for using Flume is for log aggregation.
+- Flume agents are `source`, `channel` and `sink`.
+- It can use many things as source like console application, kafka, avro, thrift, etc...
+- with `netcat` we can connect to a port and add data to it
+
+![fan flow architecture in flume](docs/01.png)
+
+- simple flow the [example.conf](./example.conf)
+- We will use telnet in this example look for implementation details in [flume and publish logs](./Section9-Section9-78SetUpFlumeAndPublishLogsWithIt.txt)
+
+![simple flow architecture in flume](docs/01.png)
+
+- live log flow the [flumelogs.conf](./flumelogs.conf) and we will have a new subdirectory generated for every 10 minutes
+- Its parsed using the timestamp header
+- Look for implementation details in [monitor flume log flow and into directory](./Section9-79SetUpFlumeToMonitorADirectoryADirectoryAndStoreItsDataInHDFStxt)
+![log flow with header architecture in flume](docs/01.png)

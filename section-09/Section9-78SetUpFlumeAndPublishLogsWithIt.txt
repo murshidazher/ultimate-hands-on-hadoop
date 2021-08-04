@@ -22,6 +22,7 @@ sudo chmod 777 -R /var/log/flume/flume.log
 
 bin/flume-ng agent --conf conf --conf-file ~/example.conf --name a1 -DFlume.root.logger=INFO,console
 
+# In another terminal session
 # On the original putty instance of maria_dev
 # Set up your port for Flume
 
@@ -31,10 +32,10 @@ telnet localhost 44444
 
 Hello there, how are you today?
 
-Four score and seven years ago
+Fourscore and seven years ago
 
-ctrl bracket ^] to quit
+# ctrl bracket ^] to quit
 
 quit
 
-# So far unable able to see the messages displayed in console in real time, but can view the messages sent in /var/log/flume/flume.log
+# So far unable to see the messages displayed in console in real time, but can view the messages sent in /var/log/flume/flume.log
