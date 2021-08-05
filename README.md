@@ -36,7 +36,7 @@
 - [Drill, Phoenix, Presto](./section-07)
 - [Yarn, Tez, Mesos, Zookeeper, Oozie, Hue](./section-08)
 - [Real time Ingestion - kafka and flume](./section-09)
-- [Spark Streaming & Apache Storm](./section-10)
+- [Spark Streaming, Apache Storm & Apache Flink](./section-10)
   
 ## Notes
 
@@ -120,9 +120,9 @@ There are several query engines which also sits on top of the hadoop cluster. So
 
 ### Ingestion
 
-- [ ] Sqoop
-- [ ] Kafka
-- [ ] Flume
+- [x] Sqoop
+- [x] Kafka
+- [x] Flume
 
 ### NoSQL Databases
 
@@ -132,7 +132,7 @@ There are several query engines which also sits on top of the hadoop cluster. So
 
 ### Streaming
 
-- [ ] Spark Streaming
+- [x] Spark Streaming
 - [ ] Storm
 - [ ] Flink
 

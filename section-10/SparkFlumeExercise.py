@@ -20,7 +20,7 @@ pattern = re.compile(r'\s+'.join(parts)+r'\s*\Z')
 def extractStatus(line):
     exp = pattern.match(line)
     if exp:
-        status = exp.groupdict()["status"]
+        status = exp.groupdict()["status"] # aggregating based on http status code
         if status:
             return status
 
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     lines = flumeStream.map(lambda x: x[1])
     urls = lines.map(extractStatus)
 
-    # Reduce by URL over a 5-minute window sliding every 5 seconds
+    # Reduce by URL over a 5-minute window sliding/computing every 5 seconds
     urlCounts = urls.map(lambda x: (x, 1)).reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y : x - y, 300, 5)
 
     # Sort and print the results
