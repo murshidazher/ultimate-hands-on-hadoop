@@ -105,7 +105,7 @@ spark-submit --packages org.apache.spark:spark-streaming-flume_2.11:2.2.0 SparkF
 
 - `Spout` can get data from anywhere like flume, spark, kafka, etc..
 
-![strom terminology](./docs/07.png)
+![storm terminology](./docs/07.png)
 
 ### Count words with Apache Storm
 
