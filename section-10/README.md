@@ -109,4 +109,6 @@ spark-submit --packages org.apache.spark:spark-streaming-flume_2.11:2.2.0 SparkF
 
 ### Count words with Apache Storm
 
+- Classical MapReduce word count problem using steam processing
+
 ## Apache Flink
