@@ -40,7 +40,7 @@
   
 ## Notes
 
-`HDFS` → `MapReduce` (distributed prosessing is made possible by mapreduce) → `Pig` →  `Hive`
+`HDFS` → `MapReduce` (distributed processing is made possible by MapReduce) → `Pig` →  `Hive`
 
 `MRv1` mapreduce legacy architecture vs new architecture with `YARN`
 
@@ -138,7 +138,7 @@ There are several query engines which also sits on top of the hadoop cluster. So
 
 ### Notebooks and Visualization
 
-- [ ] Apache Zepplin
+- [ ] Apache Zeppelin
 - [ ] Apache Superset
 
 ### Other
