@@ -37,7 +37,8 @@
 - [Yarn, Tez, Mesos, Zookeeper, Oozie, Hue](./section-08)
 - [Real time Ingestion - kafka and flume](./section-09)
 - [Spark Streaming, Apache Storm & Apache Flink](./section-10)
-  
+- [Apache Flume](./section-11)
+
 ## Notes
 
 `HDFS` → `MapReduce` (distributed processing is made possible by MapReduce) → `Pig` →  `Hive`
