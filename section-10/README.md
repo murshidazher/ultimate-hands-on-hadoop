@@ -104,11 +104,43 @@ spark-submit --packages org.apache.spark:spark-streaming-flume_2.11:2.2.0 SparkF
 ### Storm Terminology
 
 - `Spout` can get data from anywhere like flume, spark, kafka, etc..
+- Storm has a `nimbus` server which is its single point of failure. Which is like a job trackers in spark which talks and manages zookeeper instance.
+- Storm is ususally written in Java but there are bolts which you can use in other languages. 
+- You can work with storm by using either the `storm core` lower level api or `trident` higher level which is on top of storm core which makes it easier to run with one semantics.
+- Storm runs forever once started, we need to explicitly stop it.
 
 ![storm terminology](./docs/07.png)
+
+### Storm vs Spark Streaming
+
+- If you need sub-second queries then we can use storm
+- core storm offers `stumbling windows` -> no overlap of events -> if 5mins then it breaks it for exactly 5 mins of events in addition to sliding windows
+- kafka + storm is also another popular combinations.
 
 ### Count words with Apache Storm
 
 - Classical MapReduce word count problem using steam processing
+- Creates a storm stream to get a list of incoming sentences and then find word counts from it as new sentences are received.
+- You can access the storm job status on [127.0.0.1:8744](127.0.0.1:8744)
+- We need to `kill` the job after using it or else it will keep on running.
+
+![storm ex](./docs/08.png)
 
 ## Apache Flink
+
+- Yet another way of procressing streaming data
+- Flink, in german, means `quick` and `nimble`.
+- Its up and coming, and its most similar to storm and doesnt do using micro batching like spark streaming.
+- It uses `state snapshot` to be fault tolerant.
+- It is faster than storm.
+- Flink can process streaming data (CEP) as well as batch processing.
+- `Gelly` is used for graph data.
+- `netcat` in linux lets you type something in a TCP port and broadcast it.
+
+```sh
+> nc -L 9000 # broadcast to port 9000
+```
+
+![flink arch](./docs/09.png)
+
+- It doesnt come with hdp so we need to download it manually from the website. [flink.apache.org](flink.apache.org)
