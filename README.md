@@ -37,7 +37,7 @@
 
 ## Tech Stack
 
-> All the technologies uses throughout the course
+> All the technologies used throughout the course
 
 ### Core
 
