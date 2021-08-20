@@ -91,3 +91,23 @@
 - Manages mixed configurations
 - Start / stop applications on your cluster
 - Incubating
+
+## Architecture
+
+### Exercise 1: Consume Weblogs and Keep track of top-selling books
+
+![Architecture 1](./docs/01.png)
+
+### Exercise 2: Consume Weblogs and recommend movies using item-based filtering
+
+#### Working backward
+
+- Users want to discover movies they haven't yet seen that they might enjoy
+- Their own behavior (ratings, purchases, views) are probably the best predictors
+- `Availability` and `partition-tolerance` are important. `Consistency` not so much. Refer `CAP` theorem and choose the database of choice.
+
+![Architecture 2](./docs/02.png)
+
+### Exercise 3: Keeping Tracks of Sessions
+
+![Architecture 3](./docs/03.png)

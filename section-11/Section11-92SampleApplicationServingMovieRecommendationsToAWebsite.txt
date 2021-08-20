@@ -10,7 +10,7 @@
 
 # How do movie recommendations get into Cassandra?
 # We need to do machine learning
-- Spark MLLib
+- Spark MLLib - has ALS built-in which can be used for item-based collaborative filtering
 - Flink could also be an alternative
 
 # Timeliness requirements need to be thought out
@@ -23,11 +23,11 @@ $ Pre-computing recommendations for every user
 - Wastes resources
 
 # Item-based collaborative filtering
-- Store movies similiar to other movies (these relationships don't change quickly)
-- At runtime, recommend movies similiar to ones you have liked (based on real-time behavior data)
+- Store movies similar to other movies (these relationships don't change quickly)
+- At runtime, recommend movies similar to ones you have liked (based on real-time behavior data)
 
-# So we need something that can quickly look up movies similiar to ones that you have liked at scale
-- Could reside witin web app, but probably want you own service for this
+# So we need something that can quickly look up movies similar to ones that you have liked at scale
+- Could reside within web app, but probably want you own service for this
 
 # We also need to quickly get at your past ratings / views / etc.
 
