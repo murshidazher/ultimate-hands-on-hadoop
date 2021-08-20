@@ -138,7 +138,7 @@ spark-submit --packages org.apache.spark:spark-streaming-flume_2.11:2.2.0 SparkF
 - `netcat` in linux lets you type something in a TCP port and broadcast it.
 
 ```sh
-> nc -L 9000 # broadcast to port 9000
+> nc -l 9000 # broadcast to port 9000
 ```
 
 ![flink arch](./docs/09.png)

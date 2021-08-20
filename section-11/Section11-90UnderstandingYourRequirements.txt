@@ -18,7 +18,7 @@
 - Do you really need a cluster
 
 # How much internal infrastructure and expertise is available
-- Should you use AWS or something similiar
+- Should you use AWS or something similar
 - Do systems you already know fit the bill?
 
 # What about data retention?
@@ -40,7 +40,7 @@
 # Use Spark Streaming / Storm / Flink with Kafka or Flume
 
 # Judicious future-proofing
-# Once you deicde where to store your "big data", moving it will be really difficult later on
+# Once you decide where to store your "big data", moving it will be really difficult later on
 - Think carefully before choosing proprietary solutions or cloud-based storage
 
 # Will business analysts want your data in addition to end users (or vice versa?)
