@@ -50,3 +50,44 @@
 - Can handle things like real-time search-as-you-type
 - When paired with `Kibana`, great for interactive exploration
 - Amazon offers an Elasticsearch Service
+
+## Kinesis (and the AWS ecosystem)
+
+- Amazon Kinesis is basically the AWS version of `Kafka`
+- Amazon has a whole ecosystem of its own
+  - Elastic MapReduce (EMR)
+  - S3 - can be used instead of `HDFS`
+  - Elasticsearch Service / CloudSearch
+  - DynamoDB - like `Cassandra`
+  - Amazon RDS - `RDBMS`
+  - ElastiCache
+  - AI / Machine Learning services
+  - EMR in particular is an easy way to spin up a Hadoop cluster on demand
+
+## Apache NiFi
+
+> Allows you to construct data processing flow.
+
+- Directed graphs of data routing
+  - Can connect to `Kafka`, `HDFS`, `Hive`
+- Web UI for designing complex systems
+- Often seen in the context of IoT sensors, and managing their data
+- Relevant in that it can be a streaming data source you will see
+
+## Falcon
+
+> If you've multiple data processing flow, if you need to manage the complexity then you would have a Flacon on top of the workjob scheduler (Oozie).
+
+- A `data governance engine` that sits on top of Oozie
+- Included in Hortonworks
+- Like NiFi, it allows construction of data processing graphs
+- Buts it's really meant to organize the flow of your data within Hadoop
+
+## Apache Slider
+
+- Deployment tool for apps on a `YARN` cluster
+- Allows monitoring of your apps
+- **Allows growing or shrinking your deployment as it's running throughout the cluster**
+- Manages mixed configurations
+- Start / stop applications on your cluster
+- Incubating
